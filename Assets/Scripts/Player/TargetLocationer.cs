@@ -13,10 +13,10 @@ public class TargetLocationer : MonoBehaviour
 
 	private void Update()
 	{
-		Vector2 aaa = target.transform.position - transform.position;
+		Vector2 dir = target.transform.position - transform.position;
 
-		float angle = Mathf.Atan2(aaa.y, aaa.x);
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-		transform.eulerAngles = new Vector3(0, 0, angle);
+		transform.rotation = Quaternion.Euler(0, 0, angle);
 	}
 }

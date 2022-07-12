@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
 
 	private void OnEnable()
 	{
+		isDash = true;
+		canDash = true;
+		canRot = true;
 		rigid2D.velocity = transform.up * 4f;
 		rigid2D.gravityScale = 0.3f;
 	}

@@ -12,4 +12,15 @@ public class ButtonManager : MonoBehaviour
 	{
 		obj.SetActive(true);
 	}
+	public void TimerActive(GameObject obj)
+	{
+		StartCoroutine(TimerActiveCo(obj));
+	}
+
+	IEnumerator TimerActiveCo(GameObject obj)
+	{
+		obj.SetActive(false);
+		yield return new WaitForSeconds(1f);
+		obj.SetActive(true);
+	}
 }
