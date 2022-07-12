@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
 	void Update()
     {
 		if (isDash) transform.up = rigid2D.velocity;
+		if (Input.GetKeyDown(KeyCode.F)) Rotation();
+		if (Input.GetKeyDown(KeyCode.J)) Dash();
     }
 
 	public void Rotation()
