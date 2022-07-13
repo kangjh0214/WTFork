@@ -6,13 +6,10 @@ public class TargetLocationer : MonoBehaviour
 {
     private GameObject target;
 
-	private void Awake()
-	{
-		target = GameObject.Find("Food");
-	}
-
 	private void Update()
 	{
+		target = GameObject.Find("Food");
+
 		Vector2 dir = target.transform.position - transform.position;
 
 		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
