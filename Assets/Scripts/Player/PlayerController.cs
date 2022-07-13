@@ -15,9 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-		if (isDash) transform.up = rigid2D.velocity;
-		if (Input.GetKeyDown(KeyCode.F)) Rotation();
-		if (Input.GetKeyDown(KeyCode.J)) Dash();
+        rigid2D = GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable()
@@ -31,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F)) Rotation();
+        if (Input.GetKeyDown(KeyCode.J)) Dash();
         if (isDash) transform.up = rigid2D.velocity;
     }
 
