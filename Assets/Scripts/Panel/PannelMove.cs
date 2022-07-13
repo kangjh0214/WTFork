@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PannelMove : MonoBehaviour
 {
-
-
-    GameObject target;
+    private GameObject target;
 
     private void Start()
     {
