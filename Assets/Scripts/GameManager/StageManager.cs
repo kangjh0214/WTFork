@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static int currentStage;
+    private int openStages;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void Awake()
+	{
+		openStages = PlayerPrefs.GetInt("OpenStage", 0);
+	}
+
+	public void StageClear()
+	{
+	}
 }
