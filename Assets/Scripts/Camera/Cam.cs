@@ -9,6 +9,6 @@ public class Cam : MonoBehaviour
 
 	private void Update()
 	{
-		transform.position = new Vector3(_target.transform.position.x, _target.transform.position.y / 2);
+		transform.position = new Vector3(_target.transform.position.x, _target.transform.position.y);
 	}
 }
