@@ -25,6 +25,15 @@ public class ButtonManager : MonoBehaviour
 		obj.SetActive(true);
 	}
 
+	public void Pause()
+	{
+		Time.timeScale = 0f;
+	}
+	public void UnPause()
+	{
+		Time.timeScale = 1f;
+	}
+
 	public void SceneMove(string sceneName)
 	{
 		SceneManager.LoadScene(sceneName);
