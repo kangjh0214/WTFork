@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 	public UnityEvent onGameOver;
 	public UnityEvent onGameClear;
 	public UnityEvent onGameReady;
+	public UnityEvent timerStop;
+	public UnityEvent timerReset;
 
 	private enum State { Ready, Playing, Over, Clear };
     private State state = State.Ready;
@@ -21,12 +23,21 @@ public class GameManager : MonoBehaviour
 		instance = this;
 	}
 
+	public void TimeStop()
+	{
+		timerStop.Invoke();
+	}
+	public void TimeReset()
+	{
+		timerReset.Invoke();
+	}
 	public void GameReady()
 	{
 		state = State.Ready;
 
 		if (state == State.Ready) {
 			onGameReady.Invoke();
+			timerReset.Invoke();
 		}
 	}
 	public void GameOver() 
