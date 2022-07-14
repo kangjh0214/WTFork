@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class StageManager : MonoBehaviour
 	{
 		if (currentStage == stage.Length - 1)
 		{
-
+			if (PlayerPrefs.GetInt("Seen") == 0) SceneManager.LoadScene("ClearScene");
+			else SceneManager.LoadScene("Stage");
 		}
 		else
 		{
