@@ -999,11 +999,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 203bdb21d3557944d9494856c63ed135, type: 3}
+--- !u!1 &9161118201933818507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4927282082403474515, guid: 203bdb21d3557944d9494856c63ed135, type: 3}
+  m_PrefabInstance: {fileID: 4270516928699643608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9161118201933818517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4927282082403474509, guid: 203bdb21d3557944d9494856c63ed135, type: 3}
   m_PrefabInstance: {fileID: 4270516928699643608}
   m_PrefabAsset: {fileID: 0}
+--- !u!60 &281393551032750778
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161118201933818507}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4814815, y: 1}
+    newSize: {x: 0.4814815, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.050470408, y: -0.44388294}
+      - {x: 0.05331725, y: 0.36959818}
+      - {x: 0.20579217, y: 0.37223262}
+      - {x: 0.23193404, y: 0.39557645}
+      - {x: 0.23083319, y: 0.47236598}
+      - {x: 0.20043173, y: 0.49779838}
+      - {x: -0.19380711, y: 0.49986044}
+      - {x: -0.22092561, y: 0.47578162}
+      - {x: -0.21982478, y: 0.39619413}
+      - {x: -0.19656366, y: 0.36934286}
+      - {x: -0.053509235, y: 0.36897212}
+      - {x: -0.055408597, y: -0.44128564}
+      - {x: -0.22505234, y: -0.44484934}
+      - {x: -0.24022134, y: -0.48019695}
+      - {x: -0.24074075, y: -0.5}
+      - {x: 0.23768963, y: -0.49847442}
+      - {x: 0.24124938, y: -0.4822338}
+      - {x: 0.2235729, y: -0.4443915}
 --- !u!1001 &4270516929322883206
 PrefabInstance:
   m_ObjectHideFlags: 0
