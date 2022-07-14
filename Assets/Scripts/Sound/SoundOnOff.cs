@@ -13,9 +13,9 @@ public class SoundOnOff : MonoBehaviour
     }
     public void ToggleAudioVolume()
     {
-        AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;   
-        
-        if(AudioListener.volume <= 0)
+        AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
+
+        if (AudioListener.volume <= 0)
         {
             anim.SetTrigger("Off");
         }
@@ -24,4 +24,7 @@ public class SoundOnOff : MonoBehaviour
             anim.SetTrigger("On");
         }
     }
+
+
+ 
 }
