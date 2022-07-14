@@ -24,6 +24,7 @@ public class LifeManager : MonoBehaviour
 		Invoke("Stop", 0.05f);
 		GameManager.instance.TimeStop();
 		if (collision.gameObject == GameObject.Find("Food") && !gameEnd) {
+			GetComponent<AudioOnOff>().AudioFadeOut();
 			clearEffect.SetActive(false);
 			clearEffect.transform.position = transform.position;
 			clearEffect.SetActive(true);
@@ -31,7 +32,6 @@ public class LifeManager : MonoBehaviour
 			Invoke("GameClear", 1f); 
 		}
 		else if (!gameEnd) {
-			GameManager.instance.TimeStop();
 			GameManager.instance.GameOver(); 
 		}
 	}

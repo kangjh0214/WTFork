@@ -6,6 +6,7 @@ using TMPro;
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] private float startTime;
+	[SerializeField] private float startTurnRedTime;
     [SerializeField] private TextMeshProUGUI timerText;
 	[SerializeField] private TextMeshProUGUI clearTimeText;
 	[SerializeField] private TextMeshProUGUI bestTimeText;
@@ -24,6 +25,8 @@ public class TimeManager : MonoBehaviour
 
 	private void Update()
 	{
+		if (currentTime <= startTurnRedTime) timerText.color = new Color(255f / 255f, currentTime / startTurnRedTime, currentTime / startTurnRedTime);
+		else timerText.color = Color.white;
 		if (isTimerOn) {
 			currentTime -= Time.deltaTime;
 			timerText.text = $"{(int)currentTime + 1}"; 
