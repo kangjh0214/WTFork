@@ -42,6 +42,6 @@ public class ButtonManager : MonoBehaviour
 
     public void ResetSave()
     {
-		PlayerPrefs.SetInt("OpenStage", 0);
+		PlayerPrefs.DeleteAll();
     }
 }
