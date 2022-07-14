@@ -17,8 +17,11 @@ public class StageButtonManager : MonoBehaviour
 		{
 			if (i == PlayerPrefs.GetInt("OpenStage", 0))
 			{
-				buttons[i].GetComponent<Image>().sprite = OpenStageImage;
-				buttons[i].GetComponent<StageButton>().isLocked = false;
+				if (buttons.Length != PlayerPrefs.GetInt("OpenStage", 0))
+				{
+					buttons[i].GetComponent<Image>().sprite = OpenStageImage;
+					buttons[i].GetComponent<StageButton>().isLocked = false;
+				}
 			}
 			else
 			{

@@ -42,6 +42,7 @@ public class StageManager : MonoBehaviour
 		{
 			++openStages;
 			PlayerPrefs.SetInt("OpenStage", openStages);
+			Debug.Log(PlayerPrefs.GetInt("OpenStage"));
 		}
 		Debug.Log(PlayerPrefs.GetInt("OpenStage"));
 	}
