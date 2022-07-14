@@ -156,6 +156,22 @@ MonoBehaviour:
   FoodStageImage: {fileID: 3470344551704269086, guid: dd6bb6ac9fc12a54eac827d9e69c7f05, type: 3}
   OpenStageImage: {fileID: 21300000, guid: 1a3cccabbb9a4754185622cd2434102e, type: 3}
   LockStageImage: {fileID: 21300000, guid: 89f389efd30efdc47b160935e5952c00, type: 3}
+  buttons:
+  - {fileID: 241396656}
+  - {fileID: 569340100}
+  - {fileID: 1877401437}
+  - {fileID: 1044894218}
+  - {fileID: 1342163634}
+  - {fileID: 2048975845}
+  - {fileID: 1172950674}
+  - {fileID: 2018279314}
+  - {fileID: 1602209186}
+  - {fileID: 2004643425}
+  - {fileID: 39333221}
+  - {fileID: 1664134387}
+  - {fileID: 1160497406}
+  - {fileID: 677970569}
+  - {fileID: 272713007}
 --- !u!4 &9408957
 Transform:
   m_ObjectHideFlags: 0
@@ -777,11 +793,11 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 150}
-  m_Spacing: {x: 342, y: 150}
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 150, y: 100}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &272713007
@@ -2623,9 +2639,9 @@ RectTransform:
   m_Father: {fileID: 1651194668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -980, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 100, y: 0}
   m_SizeDelta: {x: 160, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298218702
@@ -3167,7 +3183,7 @@ GameObject:
   - component: {fileID: 1485666288}
   - component: {fileID: 1485666287}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: StagePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

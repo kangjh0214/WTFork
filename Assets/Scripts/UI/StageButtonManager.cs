@@ -9,14 +9,13 @@ public class StageButtonManager : MonoBehaviour
 	[SerializeField] private Sprite OpenStageImage;
     [SerializeField] private Sprite LockStageImage;
 
-	private GameObject[] buttons;
+	[SerializeField] private GameObject[] buttons;
 
 	private void Awake()
 	{
-		buttons = GameObject.FindGameObjectsWithTag("Buttons");
-		for (int i = 0; i <= PlayerPrefs.GetInt("OpenStage"); i++)
+		for (int i = 0; i <= PlayerPrefs.GetInt("OpenStage", 0); i++)
 		{
-			if (i == PlayerPrefs.GetInt("OpenStage"))
+			if (i == PlayerPrefs.GetInt("OpenStage", 0))
 			{
 				buttons[i].GetComponent<Image>().sprite = OpenStageImage;
 				buttons[i].GetComponent<StageButton>().isLocked = false;

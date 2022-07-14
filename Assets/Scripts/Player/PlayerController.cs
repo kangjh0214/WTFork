@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField][Range(1f, 10f)] private float dashSpeed = 4;
     [SerializeField][Range(100.0f, 1000.0f)] private float rotSpeed = 600.0f;
-    [SerializeField] private float rotTime = 1.0f;
+    [SerializeField] private float rotTime;
     private bool canRot = true;
-    [SerializeField] private float dashTime = 1.0f;
+    [SerializeField] private float dashTime;
     private bool canDash = true;
     private bool isDash = true;
 
@@ -40,7 +41,6 @@ public class PlayerController : MonoBehaviour
         {
             canRot = false;
             StartCoroutine(RotCoolTime());
-            rotTime = 1.0f;
             isDash = false;
             rigid2D.angularVelocity = rotSpeed;
         }
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             canDash = false;
             StartCoroutine(DashCoolTime());
-            rigid2D.velocity = transform.up * 4f;
+            rigid2D.velocity = transform.up * dashSpeed;
             rigid2D.angularVelocity = 0f;
             isDash = true;
         }

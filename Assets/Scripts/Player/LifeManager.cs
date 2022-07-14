@@ -5,6 +5,7 @@ using UnityEngine;
 public class LifeManager : MonoBehaviour
 {
 	[SerializeField] private GameObject diyingEffect;
+	[SerializeField] private GameObject clearEffect;
 	[SerializeField] private GameObject reStartButton;
     private PlayerController myController;
     private Rigidbody2D myRigid;
@@ -18,10 +19,16 @@ public class LifeManager : MonoBehaviour
 		GameReady();
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision) //충돌시 포크 정지
+	private void OnTriggerEnter2D(Collider2D collision) //충돌시 포크 정지
 	{
-		Stop();
-		if (collision.gameObject == GameObject.Find("Food") && !gameEnd) GameClear();
+		Invoke("Stop", 0.05f);
+		if (collision.gameObject == GameObject.Find("Food") && !gameEnd) {
+			clearEffect.SetActive(false);
+			clearEffect.transform.position = transform.position;
+			clearEffect.SetActive(true);
+			gameEnd = true;
+			Invoke("GameClear", 1f); 
+		}
 		else if (!gameEnd) GameManager.instance.GameOver();
 	}
 

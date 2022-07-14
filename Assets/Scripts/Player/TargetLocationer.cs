@@ -6,7 +6,7 @@ public class TargetLocationer : MonoBehaviour
 {
     private GameObject target;
 
-	private void Update()
+	private void LateUpdate()
 	{
 		target = GameObject.Find("Food");
 
