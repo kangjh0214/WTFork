@@ -8,6 +8,6 @@ public class BackGroundManager : MonoBehaviour
 
 	private void Update()
 	{
-		transform.position = new Vector3(Player.transform.position.x / 1.2f, Player.transform.position.y / 1.5f);
+		transform.position = new Vector3(Player.transform.position.x / 1.1f, Player.transform.position.y / 1.2f);
 	}
 }

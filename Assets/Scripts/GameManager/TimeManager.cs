@@ -18,6 +18,8 @@ public class TimeManager : MonoBehaviour
 	private void Awake()
 	{
 		currentTime = startTime;
+		timerText.text = $"{(int)currentTime}";
+		timerText.gameObject.SetActive(false);
 	}
 
 	private void Update()
@@ -28,6 +30,7 @@ public class TimeManager : MonoBehaviour
 		}
 		if (currentTime <= 0)
 		{
+			timerText.text = $"{0}";
 			GameManager.instance.TimeStop();
 			GameManager.instance.GameOver();
 		}
