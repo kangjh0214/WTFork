@@ -38,4 +38,10 @@ public class ButtonManager : MonoBehaviour
 	{
 		SceneManager.LoadScene(sceneName);
 	}
+
+
+    public void ResetSave()
+    {
+		PlayerPrefs.SetInt("OpenStage", 0);
+    }
 }
