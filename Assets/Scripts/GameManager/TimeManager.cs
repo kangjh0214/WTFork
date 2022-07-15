@@ -41,24 +41,28 @@ public class TimeManager : MonoBehaviour
 
 	public void StartTimer()
 	{
+		Debug.Log("StartTimer");
 		currentTime = startTime;
         isTimerOn = true;
 	}
 
 	public void StopTimer()
 	{
+		Debug.Log($"StopTimer {currentTime}");
 		isTimerOn = false;
 		_clearTime = startTime - currentTime;
-		currentTime = startTime;
 	}
 
 	public void TimerReset()
 	{
+		Debug.Log("ResetTimer");
+		currentTime = startTime;
 		timerText.text = $"{(int)currentTime}";
 	}
 
 	public void ClearTime()
 	{
+		Debug.Log($"ClearTime {clearTime}");
 		clearTimeText.text = $"ClearTime : {clearTime.ToString("F2")}s";
 		if (PlayerPrefs.GetFloat($"ClearTime{StageManager.currentStage}", 0) > _clearTime || 
 			PlayerPrefs.GetFloat($"ClearTime{StageManager.currentStage}") == 0)

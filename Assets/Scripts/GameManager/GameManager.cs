@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void GameReady()
 	{
+		Debug.Log("GameReady");
 		state = State.Ready;
 
 		if (state == State.Ready) {
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void GameOver() 
 	{
+		Debug.Log("GameOver");
 		state = State.Over;
 
 		if (state == State.Over) {
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void GameClear()
 	{
+		Debug.Log("GameClear");
 		state = State.Clear;
 
 		if (state == State.Clear) {

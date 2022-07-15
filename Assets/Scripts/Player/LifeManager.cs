@@ -21,19 +21,23 @@ public class LifeManager : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision) //충돌시 포크 정지
 	{
-		Invoke("Stop", 0.05f);
 		GameManager.instance.TimeStop();
+		Invoke("Stop", 0.05f);
+
 		if (collision.gameObject == GameObject.Find("Food") && !gameEnd) {
+			gameEnd = true;
 			GetComponent<AudioOnOff>().AudioFadeOut();
+
 			clearEffect.SetActive(false);
 			clearEffect.transform.position = transform.position;
 			clearEffect.SetActive(true);
-			gameEnd = true;
+
 			Invoke("GameClear", 1f); 
 		}
 		else if (!gameEnd) {
 			GameManager.instance.GameOver(); 
 		}
+		else { }
 	}
 
 	private void Stop()
